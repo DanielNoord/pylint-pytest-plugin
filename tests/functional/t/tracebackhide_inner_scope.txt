@@ -1,0 +1,3 @@
+unnecessary-lambda-assignment:10:10:10:21:test_something.<lambda>:"Lambda expression assigned to a variable. Define a function using the ""def"" keyword instead.":HIGH
+unused-variable:21:8:21:11:TestClass.assert_something:Unused variable 'var':UNDEFINED
+unnecessary-lambda-assignment:25:20:25:48:<lambda>:"Lambda expression assigned to a variable. Define a function using the ""def"" keyword instead.":HIGH

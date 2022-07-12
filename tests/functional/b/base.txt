@@ -1,0 +1,3 @@
+pointless-statement:2:0:2:1::Statement seems to have no effect:UNDEFINED
+unnecessary-lambda-assignment:3:6:3:17:<lambda>:"Lambda expression assigned to a variable. Define a function using the ""def"" keyword instead.":HIGH
+unused-variable:9:4:9:12:func:Unused variable 'variable':UNDEFINED

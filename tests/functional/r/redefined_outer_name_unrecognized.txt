@@ -1,0 +1,2 @@
+unused-import:5:0:5:13::Unused import pytest:UNDEFINED
+redefined-outer-name:16:4:16:26:test_something_else:Redefining name 'my_second_fixture' from outer scope (line 10):UNDEFINED

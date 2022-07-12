@@ -1,0 +1,12 @@
+# Build artifacts
+build/
+dist/
+pylint_pytest_plugin.egg-info/
+
+# Coverage
+.coverage
+coverage.xml
+htmlcov
+
+# Local files
+.DS_Store

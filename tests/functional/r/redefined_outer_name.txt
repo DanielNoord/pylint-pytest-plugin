@@ -1,0 +1,3 @@
+invalid-name:63:4:63:20:test_something_else:"Argument name ""NOTAFIXTURE"" doesn't conform to snake_case naming style":HIGH
+redefined-outer-name:63:4:63:20:test_something_else:Redefining name 'NOTAFIXTURE' from outer scope (line 54):UNDEFINED
+redefined-outer-name:64:4:64:27:test_something_else:Redefining name 'also_not_a_fixture' from outer scope (line 57):UNDEFINED

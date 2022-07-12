@@ -1,0 +1,91 @@
+[build-system]
+requires = [
+    "setuptools @ git+https://github.com/pypa/setuptools@feature/pep660"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylint-pytest-plugin"
+version = "0.1.0a1"
+license = {text = "MIT License"}
+description = "Plugin for pytest compatability for pylint"
+readme = "README.md"
+authors     = [
+    {name = "Daniël van Noord", email = "3665637+DanielNoord@users.noreply.github.com"}
+]
+keywords    = ["pylint", "linter", "lint", "pytest"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Framework :: Pytest",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Typing :: Typed",
+]
+requires-python = ">=3.7.2"
+dependencies    = [
+    "pylint>=2.14.0",
+    "pytest>=7.0",
+]
+
+[tool.setuptools]
+packages = ["pylint_pytest_plugin"]
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+addopts = "--cov --cov-report=html --cov-report=term --cov-report=xml"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+files = "pylint_pytest_plugin,tests"
+strict = true
+show_error_codes = true
+enable_error_code = "ignore-without-code"
+
+[[tool.mypy.overrides]]
+module = ["astroid.*", "pylint.*"]
+ignore_missing_imports = true
+
+[tool.pylint.MASTER]
+load-plugins=[
+    "pylint.extensions.check_elif",
+    "pylint.extensions.code_style",
+    "pylint.extensions.comparetozero",
+    "pylint.extensions.confusing_elif",
+    "pylint.extensions.docparams",
+    "pylint.extensions.docstyle",
+    "pylint.extensions.empty_comment",
+    "pylint.extensions.for_any_all",
+    "pylint.extensions.set_membership",
+    "pylint.extensions.typing"
+]
+py-version="3.7"
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = [
+    "too-few-public-methods",
+]
+enable = [
+    "c-extension-no-member",
+]
+
+[tool.pylint.BASIC]
+no-docstring-rgx = "__.*__"
+good-names = "f"
+
+[tool.pylint.MISCELLANEOUS]
+notes=["XXX","FIXME"]
+notes-rgx = 'TODO(?!\(#\d+\))'

@@ -1,0 +1,28 @@
+name: Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  pylint:
+    name: Pylint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code from GitHub
+        uses: actions/checkout@v3.0.2
+        with:
+          fetch-depth: 1
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          pip install -r requirements-dev.txt
+          pre-commit install
+      - name: Run pylint
+        run: |
+          pre-commit run pylint --all-files

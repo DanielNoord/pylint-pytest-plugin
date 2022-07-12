@@ -1,0 +1,4 @@
+[report]
+include =
+    pylint_pytest_plugin/*
+fail_under = 100

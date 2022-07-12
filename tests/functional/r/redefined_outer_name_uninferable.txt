@@ -1,0 +1,2 @@
+import-error:5:0:5:26::Unable to import 'undefined':UNDEFINED
+redefined-outer-name:15:4:15:19:test_something:Redefining name 'my_fixture' from outer scope (line 9):UNDEFINED
