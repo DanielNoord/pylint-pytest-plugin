@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pylint-pytest-plugin"
-version = "0.1.0a1"
+version = "0.1.0a2"
 license = {text = "MIT License"}
 description = "Plugin for pytest compatability for pylint"
 readme = "README.md"
