@@ -105,6 +105,10 @@ def emit_redefined_outer_name(
 
     This checks whether the name is actually a pytest fixture.
     """
+    # Imports always redefine names from outer scopes
+    if isinstance(node, (nodes.ImportFrom, nodes.Import)):
+        return True
+
     assert isinstance(node, nodes.AssignName)
     definitions: nodes.NodeNG = node.root().locals.get(node.name, [])
 

@@ -1,0 +1,2 @@
+redefined-outer-name:12:4:12:24:test_import_from:Redefining name 'foo' from outer scope (line 7):UNDEFINED
+redefined-outer-name:17:4:17:14:test_import:Redefining name 'baz' from outer scope (line 5):UNDEFINED
