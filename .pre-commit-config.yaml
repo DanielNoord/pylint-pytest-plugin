@@ -10,7 +10,7 @@ repos:
       - id: check-yaml
       - id: check-toml
   - repo: https://github.com/PyCQA/autoflake
-    rev: v1.7.1
+    rev: v1.7.7
     hooks:
       - id: autoflake
         exclude: &fixtures tests/functional/
@@ -21,7 +21,7 @@ repos:
           - --remove-duplicate-keys
           - --remove-unused-variables
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.0.0
+    rev: v3.2.0
     hooks:
       - id: pyupgrade
         args: [--py37-plus]
