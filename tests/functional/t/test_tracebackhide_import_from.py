@@ -1,7 +1,7 @@
 """Test for setting __tracebackhide__ within a test function."""
 
 
-from pytest import skip as _skip  # [unused-import]
+from pytest import skip # [unused-import]
 
 
 def assert_something() -> None:
