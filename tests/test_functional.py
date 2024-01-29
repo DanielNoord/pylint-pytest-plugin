@@ -42,7 +42,7 @@ def test_functional(
     """Run the functional tests."""
     # pylint: disable=protected-access
     __tracebackhide__ = True
-    lint_test: (LintModuleOutputUpdate | testutils.LintModuleTest)
+    lint_test: LintModuleOutputUpdate | testutils.LintModuleTest
     if UPDATE_FILE.exists():
         lint_test = LintModuleOutputUpdate(test_file, pytestconfig)
     else:
