@@ -1,3 +1,7 @@
+**Archived**
+
+Please consider using https://github.com/pylint-dev/pylint-pytest.
+
 WIP
 
 Tentative TODO list:
